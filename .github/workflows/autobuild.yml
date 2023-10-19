@@ -26,6 +26,7 @@ jobs:
       - name: Build
         run: | 
           cd ./android
+          chmod +x ./gradlew  # 添加这一行来给予执行权限
           ./gradlew assembleRelease
       - name: Generate Changelog
         run: echo github.event_name
@@ -49,5 +50,5 @@ jobs:
       - name: Build
         run: | 
           cd ./android
+          chmod +x ./gradlew  # 添加这一行来给予执行权限
           ./gradlew assembleRelease
-      
